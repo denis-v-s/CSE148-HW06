@@ -1,0 +1,55 @@
+/**
+ * Course
+ */
+public class Course {
+
+  private String courseName;
+  private int courseId;
+  private int credit;
+  private String textbook;
+  private int COURSE_ID = 0;
+
+  public Course() {
+    super();
+    this.setCourseId();
+  }
+
+  public Course(String courseName, int credit, String textbook) {
+    this();
+    this.setCourseName(courseName);
+    this.setCredit(credit);
+    this.setTextbook(textbook);
+  }
+
+  public String getCourseName() {
+    return this.courseName;
+  }
+
+  public void setCourseName(String courseName) {
+    this.courseName = courseName;
+  }
+
+  public int getCourseId() {
+    return this.courseId;
+  }
+
+  public void setCourseId() {
+    this.courseId = this.COURSE_ID++;
+  }
+
+  public int getCredit() {
+    return this.credit;
+  }
+
+  public void setCredit(int credit) {
+    this.credit = credit;
+  }
+
+  public String getTextbook() {
+    return this.textbook;
+  }
+
+  public void setTextbook(String textbook) {
+    this.textbook = textbook;
+  }
+}
