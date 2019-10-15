@@ -33,7 +33,7 @@ public class Course {
     return this.courseId;
   }
 
-  public void setCourseId() {
+  private void setCourseId() {
     this.courseId = this.COURSE_ID++;
   }
 
