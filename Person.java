@@ -11,11 +11,11 @@ public class Person {
   public Person() {}
 
   public Person(String name, String address, int age, String phoneNumber, String gender) {
-    this.name = name;
-    this.address = address;
-    this.age = age;
-    this.phoneNumber = phoneNumber;
-    this.gender = gender;
+    this.setName(name);
+    this.setAddress(address);
+    this.setAge(age);
+    this.setPhoneNumber(phoneNumber);
+    this.setGender(gender);
   }
 
   public String getName() {
