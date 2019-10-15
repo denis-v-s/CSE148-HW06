@@ -25,5 +25,18 @@ public class App {
     // Check David and Mary’s average GPA
     System.out.println("David's avergae GPA is " + s1.getAverageGPA());
     System.out.println("Mary's avergae GPA is " + s2.getAverageGPA());
+
+    // try to add a course with status 5
+    Course course0 = null;
+    MyCourse c0 = null;
+    try {
+      course0 = new Course("Other Course", 2, "Other Course Textbook");
+      c0 = new MyCourse(course0, 2.1, 5);
+      s2.addCourse(c0);
+    }
+    catch (Exception ex) {
+      System.out.println("Unable to add: " + course0.getCourseName());
+      System.out.println(ex.getMessage());
+    }
   }
 }
