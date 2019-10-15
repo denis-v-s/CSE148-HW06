@@ -35,6 +35,9 @@ public class MyCourse {
 
   // 0: taking / in progress, 1: taken/passed, 2: taken/failed, 3: withdraw
   public void setStatus(int status) {
+    if (status < 0 || status > 3) {
+      throw new IllegalArgumentException("Status must be an integer between 0 and 3, inclusive.");
+    }
     this.status = status;
   }
 }
