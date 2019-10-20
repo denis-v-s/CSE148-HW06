@@ -7,11 +7,11 @@ public class Course {
   private int courseId;
   private int credit;
   private String textbook;
-  private int COURSE_ID = 0;
+  private static int COURSE_ID = 0;
 
   public Course() {
     super();
-    this.setCourseId();
+    this.getNextCourseId();
   }
 
   public Course(String courseName, int credit, String textbook) {
@@ -33,8 +33,8 @@ public class Course {
     return this.courseId;
   }
 
-  private void setCourseId() {
-    this.courseId = this.COURSE_ID++;
+  private void getNextCourseId() {
+    this.courseId = Course.COURSE_ID++;
   }
 
   public int getCredit() {
